@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ultimate Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <div class="header">
+    <h1>🚀 Productivity Dashboard</h1>
+    <button onclick="toggleDark()">🌙</button>
+  </div>
+
+  <div class="controls">
+    <input id="taskInput" placeholder="Enter task...">
+
+    <select id="priority">
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+
+    <button onclick="addTask()">Add</button>
+  </div>
+
+  <input id="search" onkeyup="render()" placeholder="Search tasks...">
+
+  <div class="filters">
+    <button onclick="setFilter('all')">All</button>
+    <button onclick="setFilter('active')">Active</button>
+    <button onclick="setFilter('done')">Completed</button>
+  </div>
+
+  <p>Total Tasks: <span id="count">0</span></p>
+
+  <div id="list"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
